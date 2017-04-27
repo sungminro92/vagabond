@@ -1,1 +1,10 @@
-<h1>show page</h1>
+<h4>Cities Show Page</h4>
+
+<img class="img-responsive" <%=  image_tag @city.image_url %>
+
+<h1><%= @city.name %></h1>
+<% @city.posts.each do |post| %>
+<p><%= post.content %></p>
+<% end %>
+
+
