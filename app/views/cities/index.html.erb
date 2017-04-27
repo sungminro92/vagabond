@@ -1,7 +1,24 @@
 <h1>This is index page</h1>
 
-<ul>
-<% @cities.each do |city| %>
-  <li> <%= link_to 'city.name', city_path(@city) %> </li>
-<% end %>
-</ul>
+
+<div class="container">
+
+
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <h1 class="page-header text-center">CITIES</h1>
+    </div>
+          <% @cities.each do |city| %>
+          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+              <!-- <img class="img-responsive" src="<%= city.image_url %>" alt=""> -->
+              <img class="img-responsive" <%= image_tag city.image_url %><p class="text-center"><%= city.name%></p>
+              <!--  -->
+            </a>
+        </div>
+        <% end %>
+  </div>
+
+</div>
