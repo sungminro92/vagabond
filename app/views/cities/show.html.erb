@@ -4,15 +4,9 @@
 <br>
 <%= link_to "Add Post", new_path(city_id: @city.id), class: "waves-effect waves-light btn"  %>
 
-
- 
-
 <h1><%= @city.name %></h1>
 <% @city.posts.each do |post| %>
 <p><%= post.content %></p>
-
-
+<%= link_to 'Delete', post_path(post), method: :delete%>
 
 <% end %>
-
-
