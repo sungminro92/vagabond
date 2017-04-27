@@ -9,4 +9,5 @@ class CitiesController < ApplicationController
     # @city = City.find(params[:id])
     @city = City.find(params[:id])
   end
+
 end
