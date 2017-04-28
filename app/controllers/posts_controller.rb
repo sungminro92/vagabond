@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
+    @city = @post.city_id
     @user = @post.user
-    @city = @post.city
+
   end
 
   def new
@@ -11,7 +12,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    # @post = Post.new(post_params)
+    post = Post.create(post_params)
+    city = City.find(params[:city_id])
+    redirect_to city_path(city, post)
   end
 
   def edit
@@ -25,9 +28,9 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
+    city_id = @post.city_id
     @post.destroy
-    city_id = City.find(params[:city_id])
-    redirect_to '/cities/#{city_id}'
+    redirect_to city_path(city_id)
   end
 
   private

@@ -2,11 +2,11 @@
 
 <img class="img-responsive" <%=  image_tag @city.image_url %>
 <br>
-<%= link_to "Add Post", new_path(city_id: @city.id), class: "waves-effect waves-light btn"  %>
+<%= link_to "Add Post", new_city_post_path(@city), class: "waves-effect waves-light btn"  %>
 
 <h1><%= @city.name %></h1>
 <% @city.posts.each do |post| %>
-<p><%= link_to post.content, post_show_path(post, city_id: @city.id)%></p>
-<%= link_to 'Delete', post_path(post), method: :delete%>
+<p><%= link_to post.content, city_post_path(@city, post)%></p>
+<%= link_to 'Delete', city_post_path(@city, post), method: :delete%>
 
 <% end %>

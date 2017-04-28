@@ -24,8 +24,8 @@
 
           <% if user_signed_in? %>
             <% if user_signed_in? && @city %>
-            <li><%= link_to 'View cities', city_path %></li>
-            <li><%= link_to 'Add new post', new_path(city_id: @city.id) %></li>
+            <li><%= link_to 'View cities', cities_path %></li>
+            <li><%= link_to 'Add new post', new_city_post_path(@city) %></li>
             <% end %>
             <li><a href="/about"> About </a></li>
             <li><a href="/contact"> Contact </a></li>

@@ -25,8 +25,7 @@ seattle = City.create(name: 'Seattle', image_url:'http://i.imgur.com/Ec6cea9.png
 #   password_confirmation: '123456789'
 # )
 
-
-Post.create( content: " Go roller skating at Cascade Fun Center
+Post.create( title: "Atlanta is awesome!", content: " Go roller skating at Cascade Fun Center
 They shot ATL there! Also, every year they have events that bring all sorts of folks out to slide around on that slick, shiny floor. Word of advice: you might bust your ass trying that old reverse-in-motion trick you used to do in middle school, so don’t get too turnt", user_id: 1, city_id: atlanta.id,  )
 
 Post.create( content: "We love visiting New York City! When we visit, we spend most our time eating, since the options for food are endless. It wasn’t until recently that we realized that we haven’t seen much of the city other than the insides of restaurants. With the help of our friend Charlene, who’s been living there for 10 years, we were able to put together an NYC bucket list.", city_id: new_york.id, user_id: 1 )
