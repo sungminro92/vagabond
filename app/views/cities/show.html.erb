@@ -6,7 +6,7 @@
 
 <h1><%= @city.name %></h1>
 <% @city.posts.each do |post| %>
-<p><%= post.content %></p>
+<p><%= link_to post.content, post_show_path(post, city_id: @city.id)%></p>
 <%= link_to 'Delete', post_path(post), method: :delete%>
 
 <% end %>
