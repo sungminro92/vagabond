@@ -7,6 +7,6 @@
 <h1><%= @city.name %></h1>
 <% @city.posts.each do |post| %>
 <p><%= link_to post.content, city_post_path(@city, post)%></p>
-<%= link_to 'Delete', city_post_path(@city, post), method: :delete%>
+<%= link_to 'Delete', city_post_path(@city, post), method: :delete, data: {confirm: "Are you sure?"}%>
 
 <% end %>
