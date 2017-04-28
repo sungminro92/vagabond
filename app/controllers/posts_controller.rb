@@ -18,12 +18,16 @@ class PostsController < ApplicationController
   end
 
   def edit
-    # post = Post.create(post_params)
-    # city = post.city
-    # redirect_to city_post_path(city, post)
+    @post = Post.find(params[:id])
+    @city = @post.city
+    # redirect_to city_post_path(@city, @post)
   end
 
   def update
+    post = Post.find(params[:id])
+    city = City.find(params[:city_id])
+    post.update(post_params)
+    redirect_to city_post_path(city, post)
   end
 
   def destroy
