@@ -1,3 +1,14 @@
+
+  <nav>
+    <div class="nav-wrapper sub-nav">
+      <div class="col s12">
+        <span href="#!" class="breadcrumb"> <%= link_to 'View cities', cities_path %> </span>
+        <span class="breadcrumb"><%= link_to @city.name, @city %> </span>
+        <a href="#!" class="breadcrumb">New Post</a>
+      </div>
+    </div>
+  </nav>
+
 <p><% link_to 'back to city', @city %></p>
 
 <h1> Add new post </h1>

@@ -29,11 +29,10 @@ body {
 
 .small {
 	height: 2px;
-    background-color:#555;
+    background-color:#bdbdbd;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%; 
-    box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.6)!important;
 }
 
 
@@ -93,15 +92,23 @@ body {
  }
 
 .btn-mini {
-	height: 30px !important;
+	height: 20px !important;
 	padding: 5px !important;
-	line-height: 25px !important;
+	line-height: 10px !important;
 	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6)!important;
 	/*overflow: auto;*/
 	border-radius: 5px;
+	font-size: 10px !important;
+	margin-top: 15px;
 }
 .city-picture {
 	margin: 0 auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 
@@ -109,4 +116,29 @@ body {
      width: auto !important; 
      min-width: 100%;
 }
+
+
+.sub-nav {
+	position: absolute;
+	background-color: #b2dfdb !important;
+	
+}
+
+.breadcrumb {
+	background-color: #b2dfdb !important;
+	margin: 5px;
+}
+
+.brand-logo {
+	background-image: url('http://i.imgur.com/Wrg6aJM.jpg');
+	background-size: 100%;
+	height: 116px;
+	width: 116px;
+	margin-top: 10px;
+	
+	background-repeat: no-repeat;
+}
+
+
+
 

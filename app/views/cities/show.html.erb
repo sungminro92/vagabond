@@ -1,6 +1,11 @@
+
+
 <div class="container">
-  <h1 class="center"><%=@city.name %></h1>
+  <h1 class="center"><%= @city.name %></h1>
   <img class="img-responsive center city-picture" <%=  image_tag @city.image_url %>
+
+
+
   <br>
   <%= link_to "Add Post", new_city_post_path(@city), class: "waves-effect waves-light btn btn-large add-post-button"  %>
   <% @ordered_posts.each do |post| %>
@@ -26,4 +31,5 @@
 
       </div>
     </div>
+  <!-- </div> -->
 <% end %>
