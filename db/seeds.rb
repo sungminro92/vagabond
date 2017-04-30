@@ -8,7 +8,7 @@
 
 City.destroy_all
 Post.destroy_all
-
+User.destroy_all
 
 atlanta = City.create(name: 'Atlanta', image_url:'http://i.imgur.com/uEyWAwc.png')
 new_york = City.create(name: 'New York', image_url:'http://i.imgur.com/rbQlY3F.png')
@@ -19,16 +19,29 @@ austin = City.create(name: 'Austin', image_url:'http://i.imgur.com/8tqtGSy.png')
 barcelona = City.create(name: 'Barcelona', image_url:'http://i.imgur.com/B7IppDk.png')
 seattle = City.create(name: 'Seattle', image_url:'http://i.imgur.com/Ec6cea9.png')
 
-# user = User.create(
-#   email: 'user@domain.com',
-#   password: '123456789',
-#   password_confirmation: '123456789'
-# )
+user = User.create(
+  email: 'user1@gmail.com',
+  password: '123456',
+  password_confirmation: '123456'
+)
 
 Post.create( title: "Atlanta is awesome!", content: " Go roller skating at Cascade Fun Center
-They shot ATL there! Also, every year they have events that bring all sorts of folks out to slide around on that slick, shiny floor. Word of advice: you might bust your ass trying that old reverse-in-motion trick you used to do in middle school, so don’t get too turnt", user_id: 1, city_id: atlanta.id,  )
+They shot ATL there! Also, every year they have events that bring all sorts of folks out
+to slide around on that slick, shiny floor. Word of advice: you might bust your ass trying
+that old reverse-in-motion trick you used to do in middle school, so don’t get too turnt",
+  user_id: 1, city_id: atlanta.id)
 
-Post.create( title: "cool stuff dude", content: "We love visiting New York City! When we visit, we spend most our time eating, since the options for food are endless. It wasn’t until recently that we realized that we haven’t seen much of the city other than the insides of restaurants. With the help of our friend Charlene, who’s been living there for 10 years, we were able to put together an NYC bucket list.", city_id: new_york.id, user_id: 1 )
+Post.create( title: "Go to Atlanta theme park!", content: "Well, there are Six Flags all over the sates,
+but since atlanta has greater price (I mean 'cheaper', and when you're trying to buy 4 season tickets, its
+even more cheaper! I personally recommend you do that. Also usable in other states) And when it's perfect
+  weather, It's awesome. just know that to avoid holidays because you're going to get stepped by people.",
+  user_id: 1, city_id: atlanta.id)
+
+Post.create( title: "cool stuff dude", content: "We love visiting New York City! When we visit,
+we spend most our time eating, since the options for food are endless. It wasn’t until recently
+that we realized that we haven’t seen much of the city other than the insides of restaurants.
+With the help of our friend Charlene, who’s been living there for 10 years, we were able to
+put together an NYC bucket list.", user_id: 1, city_id: new_york.id )
 
 
 # atlanta = City.create

@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get '/profile' => 'users#show'
+
+  get '/profile/edit' => 'registration#edit'
+
+
+  devise_for :users, controllers: {
+  registrations: 'users/registrations'
+}
 
   resources :cities do
     resources :posts
