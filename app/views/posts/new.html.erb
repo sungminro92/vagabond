@@ -30,8 +30,10 @@
  <p>
     <%= f.submit %>
   </p>
+  <% if flash[:errors] %>
+  <h3><%= flash[:errors] %></h3>
+  <% end %>
 <% end %>
 
   </div>
 </div>
-

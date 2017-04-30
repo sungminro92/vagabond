@@ -15,7 +15,8 @@ class PostsController < ApplicationController
   def create
     post = Post.create(post_params)
     city = City.find(params[:city_id])
-    redirect_to city_path(city)
+    validate_new_post(post)
+
   end
 
   def edit
@@ -45,4 +46,15 @@ class PostsController < ApplicationController
       .merge(user_id: current_user.id, city_id: params[:city_id])
   end
 
+  def validate_new_post(post)
+    city = City.find(params[:city_id])
+    if post.errors.any?
+      error_object = post.errors.messages.keys.first.to_s
+      error_message = post.errors.messages.values.first[0].to_s
+      flash[:errors] = error_object.capitalize + " " + error_message
+      redirect_to :back
+    else
+      redirect_to city_path(city)
+    end
+  end
 end
