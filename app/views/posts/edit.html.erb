@@ -1,9 +1,10 @@
+<!-- breadcrumb nav -->
   <nav>
     <div class="nav-wrapper sub-nav">
       <div class="col s12">
         <span href="#!" class="breadcrumb"> <%= link_to 'All Cities', cities_path %> </span>
-        <span class="breadcrumb"><%= link_to @city %> </span>
-        <a href="#!" class="breadcrumb"> <%= @post.title %> </a>
+        <span class="breadcrumb"><%= link_to @city.name, city_path(@city.id) %> </span>
+        <a href="#!" class="breadcrumb"><%= link_to @post.title, city_post_path(@city.id, @post.id) %></a>
       </div>
     </div>
   </nav>

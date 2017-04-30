@@ -1,14 +1,19 @@
+  
+<!-- Breadcrumb nav -->
   <nav>
     <div class="nav-wrapper sub-nav">
       <div class="col s12">
         <span href="#!" class="breadcrumb"> <%= link_to 'All Cities', cities_path %> </span>
-        <span class="breadcrumb"><%= link_to @city %> </span>
-        <a href="#!" class="breadcrumb"> <%= @post.title %> </a>
+        <span class="breadcrumb"><%= link_to @city_object.name, city_path(@city) %> </span>
+        <a  class="breadcrumb"> <%= @post.title %> </a>
       </div>
     </div>
   </nav>
 
-<div class="container card ">
+
+
+<div class="container">
+  <div class="card form_card">
   <h1>Posts#show</h1>
 
   <h5>title:</h5>
@@ -18,4 +23,6 @@
   <%= @post.content %>
 
   <%= link_to "Edit",  edit_city_post_path(@post) %>
+
+ </div>
 </div>
