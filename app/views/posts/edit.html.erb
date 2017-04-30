@@ -1,5 +1,23 @@
-<div class="container center">
-  <div class="container card ">
+<!-- breadcrumb nav -->
+
+<!-- 
+<div class='test' style="background-image: url('<%= @city.image_url %>')"></div> -->
+
+<!-- <div><img src="<%= @city.image_url %>"></div> -->
+
+
+  <nav>
+    <div class="nav-wrapper sub-nav">
+      <div class="col s12">
+        <span href="#!" class="breadcrumb"> <%= link_to 'All Cities', cities_path %> </span>
+        <span class="breadcrumb"><%= link_to @city.name, city_path(@city.id) %> </span>
+        <a href="#!" class="breadcrumb"><%= link_to @post.title, city_post_path(@city.id, @post.id) %></a>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="card form_card">
       <p>
         <% link_to 'back to city', @city %>
       </p>

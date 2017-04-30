@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @city = @post.city_id
     @user = @post.user
+    @city_object = @post.city
 
   end
 
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
   def create
     post = Post.create(post_params)
     city = City.find(params[:city_id])
-    redirect_to city_path(city, post)
+    redirect_to city_path(city)
   end
 
   def edit
