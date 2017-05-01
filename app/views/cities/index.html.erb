@@ -1,21 +1,16 @@
 
 <div class="container">
-
-
-
   <div class="row">
-
     <div class="col-lg-12">
-      <h1 class="page-header text-center">CITIES</h1>
+      <h1 class="index-header page-header text-center">C I T I E S</h1>
     </div>
-          <% @cities.each do |city| %>
+      <% @cities.each do |city| %>
 
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="#">
-              <img class="img-responsive" <%= image_tag city.image_url %><p class="text-center"><%= link_to "#{city.name}", city_path(city.id) %></p>
-            </a>
-          </div>
-        <% end %>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href='<%="/cities/#{city.id}"%>'>
+          <img class="img-responsive" <%= image_tag city.image_url %><p class="text-center"><%= link_to "#{city.name}", city_path(city.id), :class=> "secondary-font" %></p>
+        </a>
+      </div>
+      <% end %>
   </div>
-
 </div>

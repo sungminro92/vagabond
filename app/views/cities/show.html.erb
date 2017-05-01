@@ -1,44 +1,32 @@
-
-
-
-
+<!-- City Show Page -->
 <div class='img-container'>
-<h1 class="center"><%= @city.name %></h1>
+  <h1 class="center city-name"><%= @city.name %></h1>
   <img class="img-responsive center city-picture" <%=  image_tag @city.image_url %>
-
 </div>
-
 <div class="container">
-
-
-
-
-  <br>
-  <%= link_to "Add Post", new_city_post_path(@city), class: "waves-effect waves-light btn btn-large add-post-button"  %>
+  <div class="margin-around"><%= link_to "Add Post", new_city_post_path(@city), class: "waves-effect waves-light btn btn-large add-post-button right"%></div>
+  
+  <!-- All posts posted on particular City show page -->
   <% @ordered_posts.each do |post| %>
-
-    <div class="card projCard col-lg-4 center">
+    <div class="margin-top card projCard col-lg-4 center">
       <div class="card-block">
-        <h4 class="card-title"><%= link_to post.title, city_post_path(@city, post)%></h4>
-        <hr class="small">
-        <p class="card-text"> <%=h truncate(post.content, :length => 1000) %></p>
-       <%= link_to "see more", city_post_path(@city, post), class: "btn btn-primary project-btn"%>
+        <h4 class="card-title post-title"><%= link_to post.title, city_post_path(@city, post)%></h4>
+          <hr class="small">
+        <p class="secondary-font card-text"> <%=h truncate(post.content, :length => 1000) %></p>
+        <%= link_to "see more", city_post_path(@city, post), class: "btn btn-primary project-btn"%>
         <br>
         <br>
 
         <div class="right">
-
           <br>
           <i> created <%= time_ago_in_words(post.created_at) %> ago </i>
           <br>
           <i> updated <%= time_ago_in_words(post.updated_at) %> ago </i>
           <br>
           <% if post.user_id == current_user.id%>
-          <%= link_to 'Delete post', city_post_path(@city, post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn-mini btn btn-primary btn-small red lighten-3"%>
+          <%= link_to 'Delete post', city_post_path(@city, post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn-mini btn btn-primary btn-small red lighten-3 right"%>
           <% end %>
         </div>
-
       </div>
     </div>
-  <!-- </div> -->
-<% end %>
+  <% end %>

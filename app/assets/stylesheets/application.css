@@ -225,10 +225,41 @@ li.nav-bar-text{
 
 .page-main-header {
 	font-family: 'Love Ya Like A Sister', cursive;
-	font-size: 45px;
+	font-size: 60px;
 }
 
+.city-name {
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 100px;
+	z-index: 1;
+}
+
+.post-title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	color: #00bfa5
+}
 .secondary-font {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
+	color: black;
+}
+
+.img-show-page {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	margin-top: -70px;
+	z-index: -1;
+}
+
+.start-below {
+	padding-top: 300px;
+}
+
+.margin-top {
+	margin-top: 15px;
+}
+.margin-around {
+	margin: 10px 0 0 20px;
 }
