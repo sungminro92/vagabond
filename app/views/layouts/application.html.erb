@@ -37,7 +37,6 @@
           <!-- If user signed in, they're able to view cities -->
           <% if user_signed_in? %>
             <% if user_signed_in? && @city %>
-              <li><%= link_to 'View cities', cities_path, class: "nav-bar-text" %></li>
               <li><%= link_to 'Add new post', new_city_post_path(@city) %></li>
             <% end %>
               <li><%= link_to 'View cities', cities_path %></li>
