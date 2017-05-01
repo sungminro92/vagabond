@@ -26,6 +26,7 @@ class PostsController < ApplicationController
     post = Post.create(post_params)
     city = City.find(params[:city_id])
     validate_new_post(post)
+
   end
 
   def edit
