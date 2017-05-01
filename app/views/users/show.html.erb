@@ -1,5 +1,16 @@
 <!-- Returning User Default Page -->
-<h1>Users#show</h1>
+<h1 class="city-name center">User Profile</h1>
 
-<p>Hello, <%= current_user.name %></p>
-<%= link_to 'Edit Profile', edit_user_registration_path %>
+<h3 class="center">Hello, <%= current_user.email %></h3>
+
+<% @user_posts.each do |post| %>
+	<div class="container">
+	<div class="card form_card">
+	  <div>
+	  	<h4 class="card-title post-title center"><%= post.title%></h4>
+	  	<hr class="small">
+	  	<p class="secondary-font card-text center"> <%= post.content %></p>
+	  </div>
+	</div>
+	</div>
+<% end %>

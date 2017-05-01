@@ -3,7 +3,7 @@
 	<div class="logotype-container">
 		
 		<% if user_signed_in? %>
-		<h1 class="index-header"> Welcome back,<br>
+		<h1 class="index-header"> Welcome,<br>
 		<%= current_user.email %>!</h1>
 			<%= link_to "VIEW CITIES",
 			cities_path,
