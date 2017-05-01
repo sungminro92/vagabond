@@ -42,7 +42,7 @@
             <% end %>
               <li><%= link_to 'View cities', cities_path %></li>
               <li><%= link_to 'Profile', profile_path %></li>
-              <li><a href="/contact"> Contact Us </a></li>
+              <li><a href="/about"> About Us </a></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: "delete" %></li>
           <% else %>
           <!-- if user is not signed in, they can only sign up or sign in or view contacts -->

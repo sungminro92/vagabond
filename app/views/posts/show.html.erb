@@ -10,35 +10,29 @@
     </div>
   </nav>
 
-
-
-<div class="container">
-  <div class="card form_card">
-    
-    <h1 class="page-main-header center">Post show</h1>
-    <%= link_to "Edit Post",  edit_city_post_path(@post), class: "btn btn-primary project-btn right" %>
-
-    <p class="secondary-font"><span class="">Title:</span>  <%= @post.title %></p>
-    <p class="secondary-font"><span>Content:</span> <%= @post.content %></p>
-    <%= link_to 'Add Comment', new_city_post_comment_path(@city, @post), class: "btn-mini btn btn-primary btn-small green lighten-3 right"%>
-    <br>
-    <br>
     <div class="container">
-    <% @comments.each do |comment| %>
       <div class="card form_card">
-        <p><small> <%= comment.user.name %> : </small></p>
-        <p> "<%= comment.content %>" </p>
-        <% if comment.user_id == current_user.id%>
-          <%= link_to 'Delete comment', city_post_comment_path(@city, @post, comment), method: :delete, data: {confirm: "Are you sure?"}, class: "right btn-mini btn btn-primary btn-small red lighten-3"%><br><br>
-        <% end %>
-      </div>
-    <% end %>
-    </div>
-    
-    
-  </div>
-</div>
-    
+        
+        <h1 class="page-main-header center">Post show</h1>
+        <%= link_to "Edit Post",  edit_city_post_path(@post), class: "btn btn-primary project-btn right" %>
 
- </div>
+        <p class="secondary-font"><span class="">Title:</span>  <%= @post.title %></p>
+        <p class="secondary-font"><span>Content:</span> <%= @post.content %></p>
+        <%= link_to 'Add Comment', new_city_post_comment_path(@city, @post), class: "btn-mini btn btn-primary btn-small green lighten-3 right"%>
+        <br>
+        <br>
+        <div class="container">
+        <% @comments.each do |comment| %>
+          <div class="card form_card">
+            <p><small> <%= comment.user.name %> : </small></p>
+            <p> "<%= comment.content %>" </p>
+            <% if comment.user_id == current_user.id%>
+              <%= link_to 'Delete comment', city_post_comment_path(@city, @post, comment), method: :delete, data: {confirm: "Are you sure?"}, class: "right btn-mini btn btn-primary btn-small red lighten-3"%><br><br>
+            <% end %>
+          </div>
+        <% end %>
+        </div>  
+      </div>
+    </div>
+  </div>
 </div>

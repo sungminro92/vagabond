@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/profile/edit' => 'registration#edit'
 
-  get '/contact' => 'users#contact'
+  get '/about' => 'users#about'
   devise_for :users, controllers: {
   registrations: 'users/registrations'
 }
