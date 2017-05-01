@@ -1,7 +1,16 @@
 <div class="background-yellow">
 	<div class="logotype-container">
+		
+		<% if user_signed_in? %>
+		<h1 class="logotype"> Welcome back,
+		<%= current_user.email %>!</h1>
+			<%= link_to "VIEW CITIES",
+			cities_path,
+			class: "waves-effect waves-light btn btn-large add-post-button get-started btn-font" %>
+		<% else %>
 		<h1 class="logotype"> Welcome to DriftR!</h1>
 		<%= link_to "GET STARTED", new_user_registration_path, class: "waves-effect waves-light btn btn-large add-post-button get-started btn-font" %>
+		<% end %>
 	</div>
 </div>
 
