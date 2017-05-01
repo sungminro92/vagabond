@@ -1,8 +1,25 @@
 <!-- User Default Page / Root -->
 <div class="background-yellow">
-	<div class="logotype-container">
+	
 		
-		<% if user_signed_in? %>
+
+		<div class="slideShow">
+    <!-- <img class="placeHolder" src="http://www.planwallpaper.com/static/images/10e39f13ddfb80570f3e44fb2016cb76.jpg" alt="my slideshow"> -->
+    <div class="layer0"></div>
+    <div class="layer1"></div>
+    <!-- <div class="layer2"></div> -->
+    <div class="layer3"></div>
+    <div class="layer4"></div>
+    <div class="layer5"></div>
+    <div class="layer6"></div>
+    <div class="layer7"></div>
+    <div class="layer8"></div>
+    <div class="layer9"></div>
+    <div class="layer10"></div>
+    <div class="layer11"></div>
+    <div class="slideOverlay">
+    	
+<% if user_signed_in? %>
 		<h1 class="index-header"> Welcome,<br>
 		<%= current_user.name %></h1>
 			<%= link_to "VIEW CITIES",
@@ -12,6 +29,13 @@
 		<h1 class="index-header"> Welcome to DriftR!</h1>
 		<%= link_to "GET STARTED", new_user_registration_path, class: "waves-effect waves-light btn btn-large add-post-button get-started btn-font" %>
 		<% end %>
-	</div>
+
+    </div>
+</div>
+
+
+
+		
+	
 </div>
 
