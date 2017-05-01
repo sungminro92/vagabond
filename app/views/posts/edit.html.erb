@@ -31,12 +31,14 @@
         </p>
         <p>
           <%= f.label :content %><br>
-          <%= f.text_area :content %>
+          <%= f.text_area :content,  :rows => 50 %>
         </p>
 
         <p>
-          <%= f.submit %>
+          <%= f.submit "Update" ,class: "btn btn-primary project-btn right" %>
         </p>
+        <br>
+        <br>
       <% end %>
   </div>
 </div>

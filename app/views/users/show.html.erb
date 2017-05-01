@@ -1,11 +1,13 @@
 <!-- Returning User Default Page -->
-<h1 class="city-name center">User Profile</h1>
+<h1 class="page-main-header center">User Profile</h1>
 
-<h3 class="center">Hello, <%= current_user.email %></h3>
+<h3 class="center">Hello, <%= current_user.name %></h3>
+<!-- showing number of user's posts -->
 <h5 class="center">
 Number of posts: <%= current_user.posts.length %></h5>
+<!-- showing number of user's comments -->
 <h5 class="center">Number of comments: <%= current_user.comments.length %></h5>
-
+<!-- user's posts -->
 <% @user_posts.each do |post| %>
 	<div class="container">
 	<div class="card form_card">

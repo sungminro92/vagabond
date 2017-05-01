@@ -1,4 +1,4 @@
-
+<!-- Add New Post Page -->
   <nav>
     <div class="nav-wrapper sub-nav">
       <div class="col s12">
@@ -9,35 +9,34 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="card form_card">
+  <!-- back link -->
+    <p><% link_to 'back to city', @city %></p>
 
-
-<p><% link_to 'back to city', @city %></p>
-
-<h1 class="page-main-header"> Add new post </h1>
-
-<%= form_for [@city, @post] do |f| %>
+    <h1 class="page-main-header center"> Add new post </h1>
+    <!-- Form for new post -->
+    <%= form_for [@city, @post] do |f| %>
   
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-      
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </p>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+    
+    <p>  
+      <%= f.label :content %><br>
+      <%= f.text_field :content %>
+    </p>
 
-  <p>
-    <%= f.submit :class=> "waves-effect waves-light btn btn-large add-post-button right"%>
-  </p>
-  <% if flash[:errors] %>
-  <h5 class="error-message-red"><%= flash[:errors] %></h5>
-  <% end %>
-  <br>
-  <br>
-<% end %>
-
+    <p>
+      <%= f.submit :class=> "waves-effect waves-light btn btn-large add-post-button right"%>
+    </p>
+  
+    <% if flash[:errors] %>
+      <h5 class="error-message-red"><%= flash[:errors] %></h5>
+    <% end %>
+      <br>
+      <br>
+    <% end %>
   </div>
 </div>
