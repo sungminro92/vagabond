@@ -3,6 +3,7 @@
   <h1 class="center city-name"><%= @city.name %></h1>
   <img class="img-responsive center city-picture" <%=  image_tag @city.image_url %>
 </div>
+
 <div class="container">
   <div class="margin-around"><%= link_to "Add Post", new_city_post_path(@city), class: "waves-effect waves-light btn btn-large add-post-button right"%></div>
   
