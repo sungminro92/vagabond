@@ -13,7 +13,9 @@
     <div class="container">
       <div class="card form_card">
         <h1 class="page-main-header center">Post show</h1>
+        <% if @post.user_id == current_user.id %>
         <%= link_to "Edit Post",  edit_city_post_path(@post), class: "btn btn-primary project-btn right" %>
+        <% end %>
 
         <p class="secondary-font"><span class="">Title:</span>  <%= @post.title %></p>
         <p class="secondary-font"><span>Content:</span> <%= @post.content %></p>
