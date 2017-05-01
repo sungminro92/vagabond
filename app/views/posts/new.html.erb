@@ -16,7 +16,7 @@
 
 <p><% link_to 'back to city', @city %></p>
 
-<h1> Add new post </h1>
+<h1 class="page-main-header"> Add new post </h1>
 
 <%= form_for [@city, @post] do |f| %>
   
@@ -24,20 +24,19 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
-    <% if flash[:errors] %>
-    <h1><%= flash[:errors] %></h1>
-    <% end %>
       
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   </p>
 
- <p>
-    <%= f.submit %>
+  <p>
+    <%= f.submit :class=> "waves-effect waves-light btn btn-large add-post-button right"%>
   </p>
   <% if flash[:errors] %>
-  <h3><%= flash[:errors] %></h3>
+  <h5 class="error-message-red"><%= flash[:errors] %></h5>
   <% end %>
+  <br>
+  <br>
 <% end %>
 
   </div>

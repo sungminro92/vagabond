@@ -7,7 +7,7 @@
 	<div class="container">
 	<div class="card form_card">
 	  <div>
-	  	<h4 class="card-title post-title center"><%= post.title%></h4>
+	  	<h4 class="card-title post-title center"><%= "[#{post.city.name}]" + '  ' + post.title%></h4>
 	  	<hr class="small">
 	  	<p class="secondary-font card-text center"> <%= post.content %></p>
 	  </div>
