@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @post = Post.find(params[:id])
     @city = @post.city_id
@@ -12,21 +14,12 @@ class PostsController < ApplicationController
   def new
     @city = City.find(params[:city_id])
     @post = Post.new
-    # @post_errors = @post.errors[:title]
-    # @title_errors = render @post.errors.to_json
-
-    # @title_errors = def title_errors 
-    #                   if @post_errors
-    #                     flash[:error] = "Action failed"
-    #                   end
-    #                 end
   end
 
   def create
     post = Post.create(post_params)
     city = City.find(params[:city_id])
     validate_new_post(post)
-
   end
 
   def edit
@@ -48,23 +41,13 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to city_path(city_id)
   end
-  def validate_new_post(post)
-    if post.errors.any?
-      error_object = post.errors.messages.keys.first.to_s
-      error_message = post.errors.messages.values.first[0].to_s
-      flash[:errors] = error_object.capitalize + " " + error_message 
-      redirect_to :back
-    end
-  end
- 
+  
   private
   def post_params
     params.require(:post)
       .permit(:title, :content)
       .merge(user_id: current_user.id, city_id: params[:city_id])
   end
-<<<<<<< HEAD
-
   def validate_new_post(post)
     city = City.find(params[:city_id])
     if post.errors.any?
@@ -76,6 +59,4 @@ class PostsController < ApplicationController
       redirect_to city_path(city)
     end
   end
-=======
->>>>>>> setup comments, styled forms, get rout to new comment
 end

@@ -1,4 +1,6 @@
 class CitiesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     # display all cities on index page
     @cities = City.all

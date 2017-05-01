@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  def index
+  end
 
   def show
     @user = current_user
@@ -10,5 +11,8 @@ class UsersController < ApplicationController
   end
 
   def update
+  end
+
+  def contact
   end
 end

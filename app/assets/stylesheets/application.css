@@ -153,3 +153,42 @@ body {
 
 }
 
+/*-------- HOMEPAGE --------*/
+
+.logotype {
+	font-family: 'Love Ya Like A Sister', cursive;
+	color: white;
+	font-size: 75px;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+.logotype-container {
+	margin-top: 20%;
+}
+
+.get-started {
+	margin-top: 5%;
+}
+
+.background-yellow {
+	position: absolute;
+	text-align: center;
+	display: fixed;
+	top: 0px;
+	background-color: yellow;
+	background-position: cover;
+	width: 100%;
+	height: 700px;
+	z-index: -1;
+}
+
+.card .form_card {
+	max-width: 400px !important;
+}
+
+.btn-font {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 50px;
+
+}

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/profile/edit' => 'registration#edit'
 
-
+  get '/contact' => 'users#contact'
   devise_for :users, controllers: {
   registrations: 'users/registrations'
 }
@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
 
   # ADDED for root
-  root 'cities#index'
+  root 'users#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

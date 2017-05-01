@@ -33,6 +33,9 @@
     <div class="card form_card">
     <p><small> <%= comment.user.email %> : </small></p>
      <p> "<%= comment.content %>" </p>
+     <% if comment.user_id == current_user.id%>
+          <%= link_to 'Delete comment', city_post_comment_path(@city, @post, comment), method: :delete, data: {confirm: "Are you sure?"}, class: "btn-mini btn btn-primary btn-small red lighten-3"%>
+          <% end %>
      </div>
     <% end %>
     
