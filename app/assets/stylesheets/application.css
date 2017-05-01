@@ -151,10 +151,6 @@ body {
 	background-repeat: no-repeat;
 }
 
-.header {
-	background-image: <%=  image_tag @city.image_url %>;
-
-}
 
 .test {
 	height: 500px;
