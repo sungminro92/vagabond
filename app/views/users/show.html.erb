@@ -2,6 +2,9 @@
 <h1 class="city-name center">User Profile</h1>
 
 <h3 class="center">Hello, <%= current_user.email %></h3>
+<h5 class="center">
+Number of posts: <%= current_user.posts.length %></h5>
+<h5 class="center">Number of comments: <%= current_user.comments.length %></h5>
 
 <% @user_posts.each do |post| %>
 	<div class="container">
