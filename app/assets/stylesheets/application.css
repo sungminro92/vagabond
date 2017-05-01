@@ -218,7 +218,17 @@ body {
 	font-size: 45px;
 }
 
-li .nav-bar-text{
+li.nav-bar-text{
 	font-family: 'Love Ya Like A Sister', cursive;
 	font-size: 25px;
+}
+
+.page-main-header {
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 45px;
+}
+
+.secondary-font {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
 }
