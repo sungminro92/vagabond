@@ -25,16 +25,20 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
-    end
+    city = City.find(params[:city_id])
+    post = Post.find(params[:post_id])
+    @comment = Comment.create(comment_params)
+    # respond_to do |format|
+    #   if @comment.save
+        redirect_to city_post_path(city, post)
+      # end
+      #   format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+      #   format.json { render :show, status: :created, location: @comment }
+      # else
+      #   format.html { render :new }
+      #   format.json { render json: @comment.errors, status: :unprocessable_entity }
+      # end
+    
   end
 
   # PATCH/PUT /comments/1
@@ -71,7 +75,7 @@ class CommentsController < ApplicationController
     def comment_params
       @post = Post.find(params[:post_id])
       params.require(:comment).permit(:content)
-      .merge(user_id: current_user.id, post_id: @post.id)
+      .merge(user_id: current_user.id, post_id: params[:post_id])
 
     end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments
+
   get '/profile' => 'users#show'
 
   get '/profile/edit' => 'registration#edit'
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
   registrations: 'users/registrations'
 }
+
 
   resources :cities do
     resources :posts do
