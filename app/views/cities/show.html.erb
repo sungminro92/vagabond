@@ -4,12 +4,12 @@
 
 <div class='img-container'>
 <h1 class="center"><%= @city.name %></h1>
-  <img class="img-responsive center city-picture" <%=  image_tag @city.image_url %> 
+  <img class="img-responsive center city-picture" <%=  image_tag @city.image_url %>
 
 </div>
 
 <div class="container">
-  
+
 
 
 
@@ -25,7 +25,7 @@
        <%= link_to "see more", city_post_path(@city, post), class: "btn btn-primary project-btn"%>
         <br>
         <br>
-        
+
         <div class="right">
 
           <br>
@@ -33,7 +33,9 @@
           <br>
           <i> updated <%= time_ago_in_words(post.updated_at) %> ago </i>
           <br>
+          <% if post.user_id == current_user.id%>
           <%= link_to 'Delete post', city_post_path(@city, post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn-mini btn btn-primary btn-small red lighten-3"%>
+          <% end %>
         </div>
 
       </div>
