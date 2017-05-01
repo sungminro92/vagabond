@@ -9,6 +9,7 @@
 City.destroy_all
 Post.destroy_all
 User.destroy_all
+Comment.destroy_all
 
 atlanta = City.create(name: 'Atlanta', image_url:'http://i.imgur.com/uEyWAwc.png')
 new_york = City.create(name: 'New York', image_url:'http://i.imgur.com/rbQlY3F.png')
@@ -25,24 +26,30 @@ user = User.create(
   password_confirmation: '123456'
 )
 
-Post.create( title: "Atlanta is awesome!", content: " Go roller skating at Cascade Fun Center
+atlanta_post_one = Post.create( title: "Atlanta is awesome!", content: " Go roller skating at Cascade Fun Center
 They shot ATL there! Also, every year they have events that bring all sorts of folks out
 to slide around on that slick, shiny floor. Word of advice: you might bust your ass trying
 that old reverse-in-motion trick you used to do in middle school, so don’t get too turnt",
-  user_id: 1, city_id: atlanta.id)
+  user_id: user.id, city_id: atlanta.id)
 
-Post.create( title: "Go to Atlanta theme park!", content: "Well, there are Six Flags all over the sates,
+atlanta_post_two = Post.create( title: "Go to Atlanta theme park!", content: "Well, there are Six Flags all over the sates,
 but since atlanta has greater price (I mean 'cheaper', and when you're trying to buy 4 season tickets, its
 even more cheaper! I personally recommend you do that. Also usable in other states) And when it's perfect
   weather, It's awesome. just know that to avoid holidays because you're going to get stepped by people.",
-  user_id: 1, city_id: atlanta.id)
+  user_id: user.id, city_id: atlanta.id)
 
-Post.create( title: "cool stuff dude", content: "We love visiting New York City! When we visit,
+ny_post_one = Post.create( title: "cool stuff dude", content: "We love visiting New York City! When we visit,
 we spend most our time eating, since the options for food are endless. It wasn’t until recently
 that we realized that we haven’t seen much of the city other than the insides of restaurants.
 With the help of our friend Charlene, who’s been living there for 10 years, we were able to
-put together an NYC bucket list.", user_id: 1, city_id: new_york.id )
+put together an NYC bucket list.", user_id: user.id, city_id: new_york.id )
 
+Comment.create( content:'Not sure about this!', user_id: user.id, post_id: atlanta_post_one.id)
+Comment.create( content:'Thanks so much for this awesome post!', user_id: user.id, post_id: atlanta_post_one.id)
+Comment.create( content:'I love the theme park!', user_id: user.id, post_id: atlanta_post_two.id)
+Comment.create( content:'ok cool', user_id: user.id, post_id: atlanta_post_two.id)
+Comment.create( content:'I love NYC food!', user_id: user.id, post_id: ny_post_one.id)
+Comment.create( content:'heck yeah', user_id: user.id, post_id: ny_post_one.id)
 
 # atlanta = City.create
 
@@ -57,10 +64,10 @@ put together an NYC bucket list.", user_id: 1, city_id: new_york.id )
 # Todo.create(content: "Shoot hoops", category_id: sports_category.id)
 
 # Post.create
-# create_table "posts", force: :cascade do |t|
+# create_table 'posts", force: :cascade do |t|
 #     t.text     "content"
 #     t.integer  "user_id"
 #     t.integer  "city_id"
-#     t.datetime "created_at", null: false
-#     t.datetime "updated_at", null: false
+#     t.datetime 'created_at", null: false
+#     t.datetime 'updated_at", null: false
 #   end

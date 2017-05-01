@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   get '/profile' => 'users#show'
 
   get '/profile/edit' => 'registration#edit'
@@ -9,8 +10,9 @@ Rails.application.routes.draw do
 }
 
   resources :cities do
-    resources :posts
-      # resources :comments
+    resources :posts do
+      resources :comments
+    end
   end
 
   # # ----> THIS WILL DO ALL ROUTES WELL.
