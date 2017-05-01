@@ -1,3 +1,13 @@
+/* ----- FONT USED 
+font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Open Sans', sans-serif; -----*/
+
+/*----- COLOR USED 
+#00bfa5 main green
+ */
+
+
+
 body {
 	background-color: #ffffff !important;
 }
@@ -164,7 +174,7 @@ body {
 }
 
 .logotype-container {
-	margin-top: 20%;
+	margin-top: 15%;
 }
 
 .get-started {
@@ -191,4 +201,24 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 50px;
 
+}
+
+/* NEW ADDED */
+.primary-font {
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.index-header {
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 65px;
+}
+
+.logotype {
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 45px;
+}
+
+li .nav-bar-text{
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 25px;
 }
