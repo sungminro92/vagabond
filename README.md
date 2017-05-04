@@ -2,22 +2,33 @@
 
 [DriftR deployed app](https://driftr-app.herokuapp.com/)
 
-For this project, our group made an app where users can share fun things to do in their favorite cities.  Users can go to different cities where they can see a picture of the city, and other users' shared posts. These posts are ideas of fun things you can do in that particular city.  A user can sign up and create posts to share things they like to do in that city also.  A user can also delete, edit, and view these posts.  In addition to posting, users can comment on other peoples' posts.  When a post is viewed, all comments for that post can be seen.
+For this project, our team made an app where users can share fun facts/things about their favorite cities. Users can explore different cities that they can go on a particular city page, where it shows a picture of the city, and all users can share their posts. with Devise, users are able to sign up/sign in to view all cities. Some validations are applied on authenticatiion and new/edit post forms. Users can create posts to share things they like to do, view all other users' posts, and all comments on them. Only currently logged in user is edit and delete their own posts and comments.
+
+Our team's approach, in addition to this project, was to gather and work cooperatively. We visually set up relatioships between each model/schema first so we understand data we're dealing with. Using trello, we approached our short goals step by step, achieving what our client would expect to see. Advantages of working together are such as learning better while we talk & discuss through codings, finding solutions to errors more quickly, and building code in a more efficient way.
+Thank you!
+
+![trello](images/trello.png?raw=true)
+
+
+#### EARD Diagram
+
+![ERD diagram](images/erd_diagram.jpg?raw=true)
 
 #### Technologies Used: 
 
 - HTML, CSS, Javascript
 - Ruby on Rails
 - Devise
-- Trello
+- Trello board
 - Photoshop
 - Illustrator
 
-*Features: 
+#### Features: 
 
-    *Full CRUD actions on posts
-    *Comments on posts
-    *User profile
+- Full CRUD actions on posts on a particular city
+- Comments showing user name on posts
+- User profile showing how many posts & comments have been pasted by current user
+- User authorization is enabled on edit/delete actions
 
 #### Wireframes: 
 
