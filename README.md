@@ -7,12 +7,12 @@ For this project, our team made an app where users can share fun facts/things ab
 Our team's approach, in addition to this project, was to gather and work cooperatively. We visually set up relatioships between each model/schema first so we understand data we're dealing with. Using trello, we approached our short goals step by step, checking off the checklists, achieving what our client would expect to see. Advantages of working together are such as learning better while we talk & discuss through codings, finding solutions to errors more quickly, and building code in a more efficient way.
 Thank you!
 
-![trello](./public/images/trello.png?raw=true)
+![trello](http://i.imgur.com/ISwRmpl.png)
 
 
 #### EARD Diagram
 
-![ERD diagram](./public/images/erd_diagram.png?raw=true)
+![ERD diagram](http://i.imgur.com/kDtDizB.png)
 
 #### Technologies Used: 
 
