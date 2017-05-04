@@ -7,12 +7,23 @@ For this project, our team made an app where users can share fun facts/things ab
 Our team's approach, in addition to this project, was to gather and work cooperatively. We visually set up relatioships between each model/schema first so we understand data we're dealing with. Using trello, we approached our short goals step by step, checking off the checklists, achieving what our client would expect to see. Advantages of working together are such as learning better while we talk & discuss through codings, finding solutions to errors more quickly, and building code in a more efficient way.
 Thank you!
 
+#### Our Trello board
 ![trello](http://i.imgur.com/ISwRmpl.png)
 
 
-#### EARD Diagram
+#### Trello board:
+
+[trello link](https://trello.com/b/Q0gLifCi/project-vagabond)
+
+
+#### ERD Diagram
 
 ![ERD diagram](http://i.imgur.com/kDtDizB.png)
+
+#### Wireframes: 
+
+![wireframe1](https://raw.githubusercontent.com/ATL-WDI-Exercises/project-vagabond/master/wireframes.png)
+
 
 #### Technologies Used: 
 
@@ -30,13 +41,6 @@ Thank you!
 - User profile showing how many posts & comments have been pasted by current user
 - User authorization is enabled on edit/delete actions
 
-#### Wireframes: 
-
-![wireframe1](https://raw.githubusercontent.com/ATL-WDI-Exercises/project-vagabond/master/wireframes.png)
-
-#### Trello board:
-
-[trello link](https://trello.com/b/Q0gLifCi/project-vagabond)
 
 *Future Development: 
 
