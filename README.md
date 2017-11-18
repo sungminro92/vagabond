@@ -56,6 +56,6 @@ Rush Myers:
 [portfolio site](http://rushmyers.bitballoon.com/)
 
 Sungmin Ro: 
-[portfolio site](https://github.com/tjdals504)
+[portfolio site](https://github.com/sungminro92)
 
 
